@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PictureRenamer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="Image Renamer" Height="355.42" Width="391.04" Icon="rename_icon_k7H_icon.ico" Loaded="Window_Loaded">
+    <StackPanel Margin="10">
+        <Label Content="Paste your root image folder path here: " Margin="5"/>
+        <TextBox x:Name="TB_path" Height="35" Margin="5"/>
+        <Button x:Name="Btn_rename" Content="Rename" Click="Btn_rename_Click" Margin="5"/>
+        <TextBlock Text="This program renames all pictures in root folder's subfolders into 00001.jpg, 00002.jpg.....and put result in root folder" TextWrapping="Wrap" Margin="5" Foreground="Gray"/>
+
+    </StackPanel>
 </Window>
