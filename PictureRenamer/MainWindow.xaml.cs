@@ -73,7 +73,9 @@ namespace PictureRenamer
                 {
                     using (Bitmap b = new Bitmap(f.FullName))
                     {
-                        b.Save(path + $"\\Img_{index:D5}.jpg");
+                        string dateStamp = DateTime.Now.ToString("yyyyMMdd");
+                        string timeStamp = DateTime.Now.ToString("HHmmss");
+                        b.Save(path + $"\\Img_{dateStamp}_{timeStamp}_{index:D5}.jpg");
                         index++;
                         renameRoutine.ReportProgress((int)((index / (float)num_images) * 100));
                     }
